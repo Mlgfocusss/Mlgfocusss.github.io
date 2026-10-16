@@ -3,148 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dyanis Samusenka - Resume</title>
+    <title>Dyanis Samusenka – Resume</title>
+    <meta name="description" content="Dyanis Samusenka – software engineering student. React, TypeScript, Go, PostgreSQL, Docker.">
     <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1f2328;
+            --muted: #59636e;
+            --accent: #0969da;
+            --line: #d1d9e0;
+            --chip: #f2f4f7;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0d1117;
+                --text: #e6edf3;
+                --muted: #9198a1;
+                --accent: #4493f8;
+                --line: #30363d;
+                --chip: #161b22;
+            }
+        }
+        * { box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 48px 20px 64px;
             line-height: 1.6;
-            color: #333;
         }
-        h1 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 0.02em;
         }
-        h2 {
-            color: #444;
-            margin-top: 30px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+        .role {
+            margin: 4px 0 14px;
+            font-size: 1.15rem;
+            color: var(--muted);
         }
         .contact {
-            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--text);
         }
-        .contact a {
-            color: #0066cc;
-            text-decoration: none;
+        h2 {
+            margin: 36px 0 12px;
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 6px;
         }
-        .contact a:hover {
-            text-decoration: underline;
+        h3 { margin: 0; font-size: 1.1rem; }
+        .meta { margin: 2px 0 6px; color: var(--muted); font-size: 0.95rem; }
+        .item { margin: 22px 0; }
+        .item:first-of-type { margin-top: 0; }
+        ul { margin: 8px 0; padding-left: 20px; }
+        li { margin: 4px 0; }
+        .skills { display: grid; gap: 8px; }
+        .skills div { display: grid; grid-template-columns: 170px 1fr; gap: 12px; }
+        .skills b { font-weight: 600; }
+        .stack { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+        .stack span {
+            background: var(--chip);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 1px 10px;
+            font-size: 0.85rem;
         }
-        .project {
-            margin: 15px 0;
-        }
-        .project h3 {
-            margin-bottom: 5px;
-        }
-        ul {
-            margin: 10px 0;
-        }
-        li {
-            margin: 5px 0;
+        @media (max-width: 560px) {
+            body { padding-top: 28px; }
+            header h1 { font-size: 1.7rem; }
+            .skills div { grid-template-columns: 1fr; gap: 0; }
         }
     </style>
 </head>
 <body>
-    <h1>DYANIS SAMUSENKA</h1>
-    <p><strong>Software Engineering Student</strong></p>
-    
-    <div class="contact">
-        📧 <a href="mailto:dyanismain1@gmail.com">dyanismain1@gmail.com</a> | 
-        💻 <a href="https://github.com/Mlgfocusss" target="_blank">github.com/Mlgfocusss</a> | 
-        📍 Minsk, Belarus
+    <header>
+        <h1>DYANIS SAMUSENKA</h1>
+        <p class="role">Software Engineering Student · Web Developer</p>
+        <div class="contact">
+            <span>📧 <a href="mailto:dyanismain1@gmail.com">dyanismain1@gmail.com</a></span>
+            <span>💻 <a href="https://github.com/Mlgfocusss" target="_blank" rel="noopener">github.com/Mlgfocusss</a></span>
+            <span>📍 Minsk, Belarus</span>
+        </div>
+    </header>
+
+    <h2>Objective</h2>
+    <p>Software engineering student building full web applications – React + TypeScript on the frontend, Go and SQL databases on the backend, shipped with Docker. Looking for a junior web developer position where I can build, test and deploy sites and services; focused on clean, fast and well-tested code.</p>
+
+    <h2>Education</h2>
+    <div class="item">
+        <h3>Minsk Radio Engineering College</h3>
+        <p class="meta">Software Development and Information Systems Support · September 2023 – Present (4th year) · Minsk, Belarus</p>
     </div>
 
-    <h2>OBJECTIVE</h2>
-    <p>Motivated software engineering student seeking a Backend Software Engineer Internship position. Eager to apply my knowledge of C++, Go fundamentals, and database management while contributing to backend development projects and expanding my technical skills in a professional environment.</p>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <div><b>Languages</b><span>Go, C++, SQL, TypeScript, Python (basic)</span></div>
+        <div><b>Frontend</b><span>React, TypeScript, Vite, HTML, CSS, WebAssembly</span></div>
+        <div><b>Backend</b><span>REST APIs, net/http, chi, pgx, JWT, OAuth 2.0, SQL migrations (goose), structured logging (slog), Go concurrency (goroutines)</span></div>
+        <div><b>Databases</b><span>PostgreSQL, MySQL, SQLite</span></div>
+        <div><b>DevOps &amp; Tools</b><span>Docker, Docker Compose, Git, GitHub, CMake</span></div>
+        <div><b>Testing</b><span>Unit testing with go test, perft testing, SPRT</span></div>
+        <div><b>Other</b><span>Qt/QML, PyTorch (basic)</span></div>
+        <div><b>OS</b><span>Linux, Windows</span></div>
+        <div><b>Spoken languages</b><span>English (B1), Russian (native), Belarusian (native)</span></div>
+    </div>
 
-    <h2>EDUCATION</h2>
-    <p><strong>Minsk Radio Engineering College</strong><br>
-    <em>Software Development and Information Systems Support</em><br>
-    September 2023 – Present (3rd year)<br>
-    Minsk, Belarus</p>
+    <h2>Projects</h2>
 
-    <h2>TECHNICAL SKILLS</h2>
-    <p><strong>Programming Languages:</strong> C++, Go, SQL</p>
-    <p><strong>Frameworks & Tools:</strong> Qt, QML, SQLite, CMake</p>
-    <p><strong>Version Control:</strong> Git, GitHub</p>
-    <p><strong>Operating Systems:</strong> Linux (understanding of basic commands), Windows</p>
-    <p><strong>Development Practices:</strong> Object-Oriented Programming (OOP), Unit Testing principles</p>
-    <p><strong>Languages:</strong> English (B1), Russian (Native), Belarusian (Native)</p>
-
-    <h2>PROJECTS</h2>
-    <div class="project">
-        <h3>FocusTracker – Habit Tracking Desktop Application</h3>
-        <p><em>C++, Qt, QML, SQLite, CMake | 2025</em><br>
-        GitHub: <a href="https://github.com/Mlgfocusss/FocusTracker" target="_blank">github.com/Mlgfocusss/FocusTracker</a></p>
+    <div class="item">
+        <h3>CineTrack – Movie &amp; TV Tracking Web App</h3>
+        <p class="meta">2026 · <a href="https://github.com/Mlgfocusss/CineTrack" target="_blank" rel="noopener">github.com/Mlgfocusss/CineTrack</a></p>
+        <div class="stack"><span>React 19</span><span>TypeScript</span><span>Go (net/http)</span><span>MySQL</span><span>JWT</span><span>OAuth 2.0</span><span>Docker</span></div>
         <ul>
-            <li>Developed a full-featured desktop application for habit tracking with GUI using Qt/QML framework</li>
-            <li>Implemented SQLite database for data persistence and management</li>
-            <li>Designed and developed user interface with multiple views (Dashboard, Habits, Tasks, Calendar, Notes)</li>
-            <li>Applied OOP principles for clean and maintainable code architecture</li>
-            <li>Managed project versioning and releases using Git/GitHub (currently at v0.8.0)</li>
-            <li>Built with CMake for cross-platform compilation support</li>
-            <li>Implemented features: habit management, task scheduling, statistics tracking, and data visualization</li>
+            <li>Designed a REST API with 40+ endpoints using only the Go standard library: JWT auth, Google OAuth sign-in and account linking, user library, comments, notifications</li>
+            <li>Designed a normalized 12-table MySQL schema evolved through versioned SQL migrations</li>
+            <li>Integrated the TMDB API through a backend proxy for catalog, search, filters and personalized recommendations</li>
+            <li>Implemented an achievement system (28 achievements) and a notification feed computed on the fly from existing data, plus user data export to JSON</li>
         </ul>
     </div>
 
-    <h2>RELEVANT COURSEWORK & KNOWLEDGE</h2>
-    <ul>
-        <li>Object-Oriented Programming</li>
-        <li>Data Structures and Algorithms</li>
-        <li>Database Management Systems</li>
-        <li>Software Development Lifecycle</li>
-        <li>Version Control Systems</li>
-        <li>Understanding of microservices architecture concepts</li>
-        <li>Basic knowledge of REST API principles</li>
-        <li>Familiarity with unit testing methodologies</li>
-    </ul>
+    <div class="item">
+        <h3>D2Helper – Dota 2 Companion Web App</h3>
+        <p class="meta">2026 · <a href="https://github.com/Mlgfocusss/dota2helper" target="_blank" rel="noopener">github.com/Mlgfocusss/dota2helper</a></p>
+        <div class="stack"><span>React</span><span>TypeScript</span><span>Go</span><span>chi</span><span>PostgreSQL</span><span>pgx</span><span>goose</span><span>Docker</span></div>
+        <ul>
+            <li>Built a Go REST backend (chi router, pgx, goose migrations, structured logging with slog), backed by PostgreSQL</li>
+            <li>Implemented Steam OpenID authentication and integrated external APIs (OpenDota, STRATZ, Steam) for match history, hero meta and draft matchups</li>
+            <li>Added AI match analysis through an OpenAI-compatible LLM API, processed as background jobs with per-user daily rate limits</li>
+            <li>Covered the backend with unit tests and containerized the full stack with Docker Compose</li>
+        </ul>
+    </div>
 
-    <h2>ADDITIONAL STRENGTHS</h2>
+    <div class="item">
+        <h3>Dyanis – Chess Engine with NNUE</h3>
+        <p class="meta">2026 · <a href="https://github.com/Mlgfocusss/dyanis-chess" target="_blank" rel="noopener">github.com/Mlgfocusss/dyanis-chess</a></p>
+        <div class="stack"><span>Go</span><span>PyTorch</span><span>WebAssembly</span><span>React</span></div>
+        <ul>
+            <li>Built a chess engine from scratch in pure Go (no third-party libraries) with bitboard move generation verified by perft tests and an advanced alpha-beta search</li>
+            <li>Implemented multithreaded search (Lazy SMP) with a shared lock-free transposition table, and SIMD (AVX2) neural-network inference</li>
+            <li>Trained a custom NNUE neural network in PyTorch on self-generated data; the engine plays at ≈3000 on Stockfish's UCI_Elo scale</li>
+            <li>Built tooling for profiling, automated parameter tuning (SPSA, Texel) and statistically validated A/B testing of engine versions (SPRT)</li>
+        </ul>
+    </div>
+
+    <h2>Additional Strengths</h2>
     <ul>
-        <li>Strong willingness to learn new technologies and frameworks</li>
-        <li>Ability to work with existing codebases and documentation</li>
-        <li>Responsible approach to meeting deadlines</li>
+        <li>Comfortable reading and working with external API documentation and existing codebases</li>
         <li>Problem-solving mindset and attention to detail</li>
-        <li>Fast learner with ability to adapt to new development environments</li>
-        <li>Team collaboration experience through academic projects</li>
+        <li>Fast learner, responsible about deadlines</li>
         <li>Competitive mindset developed through esports and chess</li>
     </ul>
 
-    <h2>EXTRACURRICULAR ACTIVITIES</h2>
-    
-    <div class="project">
+    <h2>Extracurricular Activities</h2>
+
+    <div class="item">
         <h3>Esports – Counter-Strike 2</h3>
         <ul>
-            <li><strong>Belarusian Esports Student League:</strong> 1st place (Season 8), 5-6th place (Season 7), 7-8th place (Season 5)</li>
-            <li><strong>Ultimate CyberX League:</strong> 3rd place</li>
-            <li><strong>Phygital Shooter CS2:</strong> 7-8th place</li>
-            <li>Experience in team coordination and strategic thinking under pressure</li>
+            <li><b>Belarusian Esports Student League:</b> 1st place (Season 8), 5–6th place (Season 7), 7–8th place (Season 5)</li>
+            <li>Ultimate CyberX League and Phygital Shooter CS2 tournaments participant</li>
         </ul>
     </div>
 
-    <div class="project">
+    <div class="item">
         <h3>Chess</h3>
         <ul>
-            <li><strong>3rd Rank</strong> in Belarusian classification</li>
-            <li><strong>1700 ELO</strong> on Chess.com</li>
+            <li><b>3rd Rank</b> in Belarusian classification, <b>1700 ELO</b> on Chess.com</li>
             <li>Regular tournament participant</li>
         </ul>
     </div>
 
-    <div class="project">
+    <div class="item">
         <h3>Personal Interests</h3>
         <ul>
             <li>Passionate about fitness and gym training</li>
-            <li>Enjoy competitive gaming and strategic board games</li>
-            <li>Active learner interested in backend development and system design</li>
         </ul>
     </div>
-
-    <h2>INTERESTS</h2>
-    <p>Backend development, microservices architecture, system design, open-source contribution</p>
-
 </body>
 </html>
