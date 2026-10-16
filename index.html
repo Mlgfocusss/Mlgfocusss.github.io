@@ -122,6 +122,18 @@
     <h2>Projects</h2>
 
     <div class="item">
+        <h3>Dyanis – Chess Engine with NNUE</h3>
+        <p class="meta">2026 · <a href="https://github.com/Mlgfocusss/dyanis-chess" target="_blank" rel="noopener">github.com/Mlgfocusss/dyanis-chess</a></p>
+        <div class="stack"><span>Go</span><span>PyTorch</span><span>WebAssembly</span><span>React</span></div>
+        <ul>
+            <li>Built a chess engine from scratch in pure Go (no third-party libraries) with bitboard move generation verified by perft tests and an advanced alpha-beta search</li>
+            <li>Implemented multithreaded search (Lazy SMP) with a shared lock-free transposition table, and SIMD (AVX2) neural-network inference</li>
+            <li>Trained a custom NNUE neural network in PyTorch on self-generated data; the engine plays at ≈3000 on Stockfish's UCI_Elo scale</li>
+            <li>Built tooling for profiling, automated parameter tuning (SPSA, Texel) and statistically validated A/B testing of engine versions (SPRT)</li>
+        </ul>
+    </div>
+
+    <div class="item">
         <h3>CineTrack – Movie &amp; TV Tracking Web App</h3>
         <p class="meta">2026 · <a href="https://github.com/Mlgfocusss/CineTrack" target="_blank" rel="noopener">github.com/Mlgfocusss/CineTrack</a></p>
         <div class="stack"><span>React 19</span><span>TypeScript</span><span>Go (net/http)</span><span>MySQL</span><span>JWT</span><span>OAuth 2.0</span><span>Docker</span></div>
@@ -142,18 +154,6 @@
             <li>Implemented Steam OpenID authentication and integrated external APIs (OpenDota, STRATZ, Steam) for match history, hero meta and draft matchups</li>
             <li>Added AI match analysis through an OpenAI-compatible LLM API, processed as background jobs with per-user daily rate limits</li>
             <li>Covered the backend with unit tests and containerized the full stack with Docker Compose</li>
-        </ul>
-    </div>
-
-    <div class="item">
-        <h3>Dyanis – Chess Engine with NNUE</h3>
-        <p class="meta">2026 · <a href="https://github.com/Mlgfocusss/dyanis-chess" target="_blank" rel="noopener">github.com/Mlgfocusss/dyanis-chess</a></p>
-        <div class="stack"><span>Go</span><span>PyTorch</span><span>WebAssembly</span><span>React</span></div>
-        <ul>
-            <li>Built a chess engine from scratch in pure Go (no third-party libraries) with bitboard move generation verified by perft tests and an advanced alpha-beta search</li>
-            <li>Implemented multithreaded search (Lazy SMP) with a shared lock-free transposition table, and SIMD (AVX2) neural-network inference</li>
-            <li>Trained a custom NNUE neural network in PyTorch on self-generated data; the engine plays at ≈3000 on Stockfish's UCI_Elo scale</li>
-            <li>Built tooling for profiling, automated parameter tuning (SPSA, Texel) and statistically validated A/B testing of engine versions (SPRT)</li>
         </ul>
     </div>
 
